@@ -1,0 +1,52 @@
+---
+title: "Rocky Desktop: Agentic Workspaces & Connected Apps"
+date: "2026-06-27"
+author: "Platform Team"
+tags: ["new", "internal"]
+---
+
+Rocky has crossed a meaningful threshold — from a chat surface into a full desktop agent that can reason, execute, and recover autonomously across multi-step tasks. This release ships agentic tool execution with live reasoning trails, dedicated workspaces for clean context isolation, and native integrations with GitHub and Asana.
+
+## Agentic Tool Calling & Resiliency
+
+Ask Rocky a research or analysis question and it now works the problem end-to-end: searching the web, running shell commands, writing and executing code, and handling failures without stopping to ask you what to do next.
+
+The entire execution trail stays visible as it runs — every search, every command, every decision point. You're not waiting on a black box; you're watching Rocky think.
+
+![Rocky receives a natural-language research prompt and immediately begins live exploration](/images/image_8d13bb.png)
+
+**Continuous Web Search** runs as many queries as the task demands, not just one. Rocky decides when it has enough signal and moves on — you see each search logged in the trail as it happens.
+
+**Shell & Code Execution** lets Rocky run shell commands and generate Python inline. It reads the outputs and folds them back into its reasoning, so a failed command isn't the end — it's an input.
+
+**Dependency Fallbacks** are automatic. When a required library is missing (here, `pandas`), Rocky surfaces a clear explanation in the trail and continues with an equivalent stdlib implementation rather than halting.
+
+![Web searches and inline Python code execution; Rocky pivots to a stdlib fallback after a missing pandas dependency](/images/image_8d1380.png)
+
+![The full execution trail: shell commands, web queries, error recovery, and the output beginning to take shape](/images/image_8d1365.png)
+
+The final output is structured and ready to use — key figures extracted, relationships modelled, and conclusions drawn directly from the sources Rocky found.
+
+![Final synthesis: a structured valuation breakdown with market cap, enterprise value, and key multiples](/images/image_8d139a.png)
+
+## Dedicated Workspaces
+
+Work across multiple tracks — personal projects, investment research, engineering — without everything collapsing into a single endless chat history.
+
+**Scoped Context** groups conversations under named workspaces. Each workspace carries its own operating context and model configuration. Switching is instant; nothing bleeds across.
+
+**Archive Management** keeps closed conversations organised by workspace rather than dumped into a global list. Archived chats can be restored or permanently deleted per entry, giving you a clean day-to-day view without sacrificing history.
+
+![The Workspaces panel — Personal and Invest groups, each with their own conversation threads](/images/image_8d88bb.png)
+
+![Archived chats organised by workspace, with per-entry Unarchive and Delete controls](/images/image_8d13db.png)
+
+## Connected Apps
+
+Rocky now connects to external tools and can act on them as part of a workflow — not just reference them.
+
+**GitHub Integration** brings issue-based workflows directly into Rocky. Reference, discuss, and act on GitHub issues without switching context. Rocky can read issue state and take actions within a conversation.
+
+**Asana Connection** uses a Personal Access Token through a guided in-app setup. Once connected, Rocky can read, create, and update Asana tasks as part of broader project workflows. The setup walks you through generating a token from your Asana profile in three steps.
+
+![Connected apps settings showing GitHub active, and the guided Asana Personal Access Token setup modal](/images/image_8d1419.png)

@@ -1,0 +1,52 @@
+---
+title: "Rocky Desktop: Model Controls, Permissions & Automations"
+date: "2026-06-27"
+author: "Platform Team"
+tags: ["new", "internal"]
+---
+
+This release ships the control layer for Rocky Desktop. You now have full visibility into what model is running your agent, precise control over how much autonomy it operates with, and a first-class automation engine that keeps Rocky working in the background — complete with configurable notifications so nothing slips through.
+
+## Model, Effort & Context Controls
+
+Rocky surfaces the full decision stack directly in the composer. The active model, permission tier, and effort level are always visible — and always changeable without leaving your current task.
+
+**Model Selection** supports the Codex and Claude Code families side by side: GPT-5.5, GPT-5.4, GPT-5.4-Mini on the Codex side; Opus, Sonnet, and Haiku on the Claude Code side. The composer shows the active selection inline so there is never ambiguity about what is running.
+
+**Effort Scaling** exposes a live control ranging from Low through Max. Low is fast and efficient for quick lookups; Max engages extended reasoning for synthesis, financial modelling, or multi-step planning where depth matters.
+
+![The composer showing the active permission tier and effort level — Full access with Default (recommended) Medium selected](/images/image_8d88b6.png)
+
+**Context Visibility** is available on demand via the context usage indicator in the composer. It shows a real-time breakdown of conversation tokens, cache reads, and remaining window against the active model's limit — useful for managing long sessions before hitting a ceiling.
+
+![The context usage popover: 54K conversation tokens, 144K cache reads, 21% of the 258K window used](/images/image_8d13a1.png)
+
+The **Models & Usage** settings page tracks consumption across both model families — hourly and weekly limits for Codex, session and weekly limits for Claude Code — so you have a clear picture of where you stand.
+
+![Models & Usage settings tracking limits and remaining capacity across Codex Plus and Claude Code Team accounts](/images/image_8d13fe.png)
+
+## Explicit Permissions
+
+Three clearly defined tiers let you calibrate exactly how much autonomy Rocky operates with. The active tier is always visible in the composer and can be changed at any point in a conversation.
+
+**Ask for approval** — Rocky pauses and surfaces every action touching external files or the internet before proceeding. Recommended for sensitive or unfamiliar workflows where you want full oversight.
+
+**Approve for me** — Rocky proceeds on actions it detects as routine and low-risk, pausing only when something looks potentially unsafe. Reduces friction on workflows you've already vetted.
+
+**Full access** — unrestricted operation across your local filesystem and the web. Appropriate for trusted, well-defined automations where mid-task interruptions would break the workflow.
+
+![The permission picker showing all three tiers with descriptions — Full access currently selected](/images/image_8d8898.png)
+
+## Automations & Notifications
+
+Rocky can now run scheduled agents on your behalf and surface results whether or not the app is open.
+
+**Scheduled Automations** are scoped to a specific workspace and run at a defined cadence. A Daily Pull Request Review in the Invest workspace, for example, runs each morning at 9 AM and deposits a summary directly into that workspace — no manual trigger needed.
+
+**Templates** give you a running start. The template library includes ready-made blueprints for the most common recurring tasks: finding critical bugs in recent commits, posting a daily digest of repository changes, and scanning your schedule for conflicts. Start from a template and customise, or build from scratch.
+
+![The Create Automation panel — name, workspace, schedule, and starter templates including Find critical bugs and Summarize changes daily](/images/image_8d1437.png)
+
+**Notification Controls** let you configure exactly how Rocky surfaces completed work and approval requests when the app is in the background. Toggle sound cues, upload a custom audio file, choose when sounds play, and enable OS-level banner alerts — so agent completions never go unnoticed.
+
+![Notification settings with per-type toggles, custom sound upload, sound timing, and OS notification banner controls](/images/image_8d13f8.png)

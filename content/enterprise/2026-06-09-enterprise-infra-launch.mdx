@@ -1,0 +1,35 @@
+---
+title: "Rocky Whatsapp: Enterprise Infrastructure — Asana, GWS & Audit Logging"
+date: "2026-06-11"
+author: "Platform Team"
+tags: ["new"]
+images: ["/images/Asana.png"]
+---
+
+Rocky connects the tools your team already uses — Asana, Google Workspace, and your monitoring stack — and makes them accessible from WhatsApp.
+
+## What it does
+
+Create Asana tasks, run Google Workspace automations, and get structured audit logs of every AI action — without leaving your phone.
+
+## Asana integration
+
+Rocky has direct access to your Asana workspace (BugleRock Holdings, GID 5298461875554):
+
+- **Create tasks** — assign to team members, set due dates, attach to projects
+- **List & search** — "What tasks are due this week?" or "Show Harshith's open tasks"
+- **Update & complete** — mark tasks done, change due dates, add comments
+- **Project view** — list all active projects with status
+
+> "Add a task for Harshith to review the pitch deck by Friday, in the IB pipeline project"
+
+## Google Workspace automation
+
+Rocky can execute pre-approved GWS scripts against BigQuery, Sheets, Drive, and other services via a sandboxed shell — no manual script runs needed.
+
+## Audit & compliance
+
+- Every LLM call is logged with input/output for compliance review
+- Admin-gated tools require explicit approval before execution
+- OAuth tokens encrypted at rest; HMAC-signed artifact URLs
+- Full access log available at `/admin/usage` on the dashboard
